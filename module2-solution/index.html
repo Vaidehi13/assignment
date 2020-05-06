@@ -9,6 +9,7 @@
  		}
  		*{
  			box-sizing: border-box;
+ 			width: 100%;
  		}
  		h1{
  			text-align: center;     
@@ -25,6 +26,18 @@
  			margin-top: 40px;
  			margin-right: 40px;
  			margin-left: 70px;
+ 		}
+ 		#box2{
+ 			background-color: pink;
+ 			text-align: left;
+ 			width:300px;
+ 			height: 260px;
+ 			border: 15px solid black;
+ 			padding: 10px 40px 50px 60px;
+ 			margin-top: 40px;
+ 			margin-right: 40px;
+ 			margin-left: 70px;
+
  		}
  		/* Display content at the top of section*/
  		#content{
@@ -52,17 +65,31 @@
  		{
  			#box{
  				background-color: lightblue;
- 				width:300px;
- 			    height: 260px;
+ 				/*width:300px;
+ 			    height: 260px;*/
+ 			    width: 22%
+ 			}
+ 			#box2{
+ 				background-color: lightblue;
+ 				/*width:300px;
+ 			    height: 260px;*/
+ 			    width: 22%
  			}
  		}
  		/* If browser has tablet size*/
- 		@media(min-width: 768px and max-width: 991px)
+ 		@media(min-width: 768px) and (max-width: 991px)
  		{
  			#box{
- 				width: 90%;
- 				height: 50%;
+ 				position: relative;
+ 				background-color: pink;
+ 				width: 30%;
  			}
+ 			#box2{
+ 				position: relative;
+ 				background-color: pink;
+ 				width: 75%;
+ 			}
+
  		}
  		/*If browser is of mobile size*/
  		@media(max-width: 767px)
@@ -71,7 +98,10 @@
  			background-color: yellowgreen;
  			width: 50%;
  		}
-
+        #box2{
+ 			background-color: yellowgreen;
+ 			width: 50%;
+ 		}
  		}
  	</style>
  </head>
@@ -87,7 +117,7 @@
  			Yummy Italian menu is now ready to serve!
  			Check out our Specials to get more offers.
  		</div>
- 		<div id = "box">
+ 		<div id = "box2">
  			<h3 id = "content">NON-VEG</h3>
  			Delicious Chicken varieties now at affordable price.
     Check out our new non-veg reciepes!
