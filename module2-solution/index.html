@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+ <head>
+ 	<title>Coursera Assignment Module 2</title>
+ 	<style>
+ 		body{
+ 			background-color: lightyellow;   
+ 		}
+ 		*{
+ 			box-sizing: border-box;
+ 		}
+ 		h1{
+ 			text-align: center;     
+ 			color: maroon;
+ 		}
+ 		/*Display a section*/
+ 		#box{
+ 			background-color: pink;
+ 			text-align: left;
+ 			width:300px;
+ 			height: 260px;
+ 			border: 15px solid black;
+ 			padding: 10px 40px 50px 60px;
+ 			margin-top: 40px;
+ 			margin-right: 40px;
+ 			margin-left: 70px;
+ 		}
+ 		/* Display content at the top of section*/
+ 		#content{
+ 			height: 40px;
+ 			width: 150px;
+ 			top: -29px;
+ 			right: -41px;
+ 			border: 5px solid red;
+ 			background-color: orange;
+ 			text-align: center;
+ 			float: right;
+ 			box-sizing: border-box;
+ 		}
+ 		div{
+ 			position: relative;
+ 			float: left;
+ 		}
+ 		h3{
+
+ 			position: relative;
+ 			float: top;
+ 		}
+ 		/*If browser size is of desktop*/
+ 		@media(min-width: 992px)
+ 		{
+ 			#box{
+ 				background-color: lightblue;
+ 				width:300px;
+ 			    height: 260px;
+ 			}
+ 		}
+ 		/* If browser has tablet size*/
+ 		@media(min-width: 768px and max-width: 991px)
+ 		{
+ 			#box{
+ 				width: 90%;
+ 				height: 50%;
+ 			}
+ 		}
+ 		/*If browser is of mobile size*/
+ 		@media(max-width: 767px)
+ 		{
+ 			#box{
+ 			background-color: yellowgreen;
+ 			width: 50%;
+ 		}
+
+ 		}
+ 	</style>
+ </head>
+ 	<body>
+ 		<h1>OUR  MENU</h1>
+ 		<div id = "box">
+ 			<h3 id = "content">INDIAN</h3>
+ 			Fresh Indian dishes now available.
+ 			Check out our Indian specials at affordable price!
+ 		</div>
+ 		<div id = "box">
+ 			<h3 id = "content">ITALIAN</h3>
+ 			Yummy Italian menu is now ready to serve!
+ 			Check out our Specials to get more offers.
+ 		</div>
+ 		<div id = "box">
+ 			<h3 id = "content">NON-VEG</h3>
+ 			Delicious Chicken varieties now at affordable price.Check out our new non-veg reciepes!
+ 		</div>
+ 	</body>
+ 	</html>
+ 
+
 
