@@ -2,11 +2,14 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 
   // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
   $("#navbarToggle").blur(function (event) {
+   
     var screenWidth = window.innerWidth;
     if (screenWidth < 768) {
       $("#collapsable-nav").collapse('hide');
+
     }
   });
+
 
   // In Firefox and Safari, the click event doesn't retain the focus
   // on the clicked button. Therefore, the blur event will not fire on
@@ -24,13 +27,11 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 var dc = {};
 
 var homeHtml = "snippets/home-snippet.html";
-var allCategoriesUrl =
-  "https://davids-restaurant.herokuapp.com/categories.json";
+var allCategoriesUrl ="https://davids-restaurant.herokuapp.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
-var menuItemsUrl =
-  "https://davids-restaurant.herokuapp.com/menu_items.json?category=";
-var menuItemsTitleHtml = "snippets/menu-items-title.html";
+var menuItemsUrl ="https://davids-restaurant.herokuapp.com/menu_items.json?category=";
+var menuItemsTitleHtml = "snippets/menu-item.html";
 var menuItemHtml = "snippets/menu-item.html";
 
 // Convenience function for inserting innerHTML for 'select'
@@ -40,11 +41,11 @@ var insertHtml = function (selector, html) {
 };
 
 // Show loading icon inside element identified by 'selector'.
-/*var showLoading = function (selector) {
+var showLoading = function (selector) {
   var html = "<div class='text-center'>";
-  html += "<img src='images/ajax-loader.gif'></div>";
+  //html += "<img src='images/A.jpg'></div>";
   insertHtml(selector, html);
-};*/
+};
 
 // Return substitute of '{{propName}}'
 // with propValue in given 'string'
@@ -84,22 +85,22 @@ ajaxUtils.sendGetRequest(
 });
 
 // Load the menu categories view
-/*dc.loadMenuCategories = function () {
+dc.loadMenuCategories = function () {
   showLoading("#main-content");
-  $ajaxUtils.sendGetRequest(
+  ajaxUtils.sendGetRequest(
     allCategoriesUrl,
     buildAndShowCategoriesHTML);
-};*/
+};
 
 
 // Load the menu items view
 // 'categoryShort' is a short_name for a category
-/*dc.loadMenuItems = function (categoryShort) {
+dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
-  $ajaxUtils.sendGetRequest(
+  ajaxUtils.sendGetRequest(
     menuItemsUrl + categoryShort,
     buildAndShowMenuItemsHTML);
-};*/
+};
 
 
 // Builds HTML for the categories page based on the data
@@ -283,6 +284,6 @@ function insertItemPortionName(html,
 }
 
 
-global.$dc = dc;
+window.dc = dc;
 
 })(window);
