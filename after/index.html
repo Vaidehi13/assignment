@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David Chu's China Bistro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/ajax-utils.js"></script>
+  <script src="js/script.js"></script>
+  <style>
+        body{
+          background-color:#61122f;
+
+          color: #fff;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        #header-nav{
+          background-color:#BDB76B;
+          background: url("images/table4.jpg");
+          height: 150px;
+        }
+        #logo-img{
+          background:url("images/logo2.jpg");
+          width: 124px;
+          height: 115px;
+          border:2px solid black;
+          float: left;
+        }
+        .navbar-brand h1{ /*Restaurant name*/
+          float: right;
+          font-size: 1.8em;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-shadow: 2px 2px 2px #fff;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          line-height: .75;
+          margin-left: 10px;
+          color:  #FFA07A;
+        }
+        .navbar-brand span{ /*Restaurant certification*/
+          font-family: 'Lora', serif;
+          color:  #fff;
+          
+        }
+        #collapsable-nav{ /*List*/
+          background-color: #BDB76B;
+          background: url("images/table4.jpg");
+          margin-top: 40px;
+        }
+        #collapsable-nav span{/* Items in list*/
+          color: yellowgreen;
+          font-size: 1.2em;
+          text-align: center;
+        }
+        #collapsable-nav a{/*Text in list*/
+          color: lightyellow;
+          font-size: 1.5em;
+          text-align: center;
+        }
+        #phone a{             /*Phone no*/
+          color: #fff;
+          border: 2px solid yellowgreen;
+
+        }
+        #phone-no{ 
+          background-color:yellowgreen;    /* only for xs devices*/
+          color: #000;
+          width: 90%;
+          text-align: center;
+          font-size: 1.8em;
+          border:2px solid black;
+          margin-left: 30px;
+
+        }
+        #menu-tile:hover,#specials-tile:hover,#about-tile:hover{    /*Highlight when user attempts to click or move over*/
+          box-shadow: 0px 3px 5px 3px #cccccc;
+
+        }
+        #menu-tile{                            /*Menu tile at the bottom of image*/
+          background:url("images/menu.jpg");
+            height: 250px;
+          width: 250px;
+          background-position: center;
+          margin-left: 80px;
+          margin-bottom: 25px;
+          position: relative;
+          border: 5px solid #BDB76B;
+          overflow: hidden;
+        }
+        #menu-tile span,#specials-tile span,#about-tile span{                      /*Text MENU in tile*/
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         text-align: center;
+         width: 100%;
+         font-size: 1.5em;
+         color: #fff;
+         background-color: #000;
+         opacity: 0.8;
+        }
+        #specials-tile{                                          /*Specials tile*/
+          background:url("images/special.jpg");
+            height: 250px;
+          width: 250px;
+          background-position: center;
+          margin-left: 80px;
+          margin-bottom: 25px;
+          position: relative;
+          border: 5px solid #BDB76B;
+          overflow: hidden;
+
+        }
+        #about-tile{                                           /*About tile*/
+          background:url("images/table2.jpeg");
+            height: 250px;
+          width: 250px;
+          background-position: center;
+          margin-left: 80px;
+          margin-bottom: 25px;
+          position: relative;
+          border: 5px solid #BDB76B;
+          overflow: hidden;
+        }
+        .panel-footer{                                      /*Entire footer*/
+          background-color: #222;
+          margin-top: 30px;
+          padding-bottom: 30px;
+          padding-top: 30px;
+          border-top: 0px;
+          font-size: 1.2em;
+        }
+        .panel-footer div.row{
+          margin-bottom: 30px;                 /*Separate copyright text from other*/
+        }
+        #hours,#address{
+          line-height: 2;                            /*Gives space between each line*/
+        }
+        #hours > span,#address > span{
+          font-size: 1.8em                       /*Headings should be of more font size*/
+        }
+        #address p{
+          color: #557c3e;
+          font-size: 0.8em;
+          line-height: 1.8;
+        }
+        #quotes{
+          font-style: italic;
+          font-size: 1.5em;
+        }
+        @media(min-width: 1200px)
+        {
+          .jumbotron{
+            width: 1153px;
+          }
+        }
+        @media(min-width: 992px) and (max-width: 1199px){
+
+          #header-nav{
+            height: 200px;
+          }
+        }
+        @media(min-width: 768px) and (max-width: 991px)
+        {
+          #header-nav{       /*Increase header height*/
+            height: 200px;
+          }
+            #collapsable-nav a{/*Text in list*/
+          color: lightyellow;
+          font-size: 1.4em;
+          text-align: center;
+            }
+            #phone a{
+            text-align: left;
+            width:100px;
+            font-size: 1.0em;
+            margin-top: -100px;
+            }
+            #about-tile{
+              width: 685px;
+            }
+
+        }
+        @media(max-width: 767px){
+          #menu-tile,#specials-tile,#about-tile{
+            width: 70%;
+          }
+
+        }
+      </style>
+ 
+  </head>
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left visible-md visible-lg">
+            <div id="logo-img" alt="Logo image"></div>
+          </a>
+
+          <div class="navbar-brand">
+            <a href="index.html"><h1>David Chu's China Bistro</h1></a>
+            <p>
+              
+              <span>Kosher Certified</span>
+            </p>
+          </div>
+
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li id="navHomeButton" class="visible-xs active">
+              <a href="index.html">
+                <span class="glyphicon glyphicon-home"></span> Home</a>
+            </li>
+            <li id="navMenuButton">
+              <a href="#" onclick="dc.loadMenuCategories();">
+                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
+            </li>
+            <li id="phone" class="hidden-xs">
+              <a href="tel:410-602-5008">
+                <span>410-602-5008</span></a><div>* We Deliver</div>
+            </li>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:410-602-5008">
+    <span class="glyphicon glyphicon-earphone"></span>
+    410-602-5008
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+
+  <div id="main-content" class="container"></div>
+
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          7105 Reisterstown Road<br>
+          Baltimore, MD 21215
+          <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+          <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+        </section>
+      </div>
+      <div class="text-center">&copy; Copyright David Chu's China Bistro 2016</div>
+    </div>
+  </footer>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+ 
+</body>
+</html>
